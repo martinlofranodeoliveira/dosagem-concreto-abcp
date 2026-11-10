@@ -1,0 +1,45 @@
+{
+  "identificacao": "Concreto C25 Convencional para Edificação Residencial Urbana",
+  "fck_mpa": 25,
+  "condicao_preparo": "A",
+  "classe_agressividade": "CAA_II",
+  "tipo_estrutura": "CONCRETO_ARMADO",
+  "slump_mm": 80,
+  "cimento": {
+    "tipo": "CP_II_32",
+    "massa_especifica_real_kg_l": "3.15",
+    "consumo_minimo_especifico_kg_m3": 280
+  },
+  "areia": {
+    "nome": "Areia Média Lavada de Rio",
+    "modulo_finura": "2.40",
+    "massa_especifica_real_kg_l": "2.63",
+    "massa_unitaria_solta_kg_m3": 1420,
+    "umidade_pct": "3.0",
+    "inchamento_coeficiente": "1.25",
+    "absorcao_pct": "0.8"
+  },
+  "britas": [
+    {
+      "nome": "Brita 1 Basáltica (19 mm)",
+      "d_max_mm": "19.0",
+      "massa_unitaria_compactada_kg_m3": 1520,
+      "massa_especifica_real_kg_l": "2.68",
+      "massa_unitaria_solta_kg_m3": 1440,
+      "umidade_pct": "0.5",
+      "absorcao_pct": "0.5",
+      "proporcao_mistura": 1
+    }
+  ],
+  "aditivo_redutor_agua_pct": "0.0",
+  "dosagem_aditivo_pct_cimento": "0.0",
+  "aditivo_densidade_kg_l": "1.0",
+  "teor_ar_adicional_pct": "0.0",
+  "precos": {
+    "cimento_por_saco_50kg": "38.50",
+    "areia_por_metro_cubico": "120.00",
+    "brita_por_metro_cubico": "110.00",
+    "agua_por_metro_cubico": "8.50",
+    "aditivo_por_litro": "0.00"
+  }
+}

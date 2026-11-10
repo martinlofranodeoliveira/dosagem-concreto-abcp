@@ -1,0 +1,45 @@
+{
+  "identificacao": "Concreto C20 Econômico para Piso de Galpão Rural",
+  "fck_mpa": 20,
+  "condicao_preparo": "B",
+  "classe_agressividade": "CAA_I",
+  "tipo_estrutura": "CONCRETO_ARMADO",
+  "slump_mm": 50,
+  "cimento": {
+    "tipo": "CP_II_32",
+    "massa_especifica_real_kg_l": "3.15",
+    "consumo_minimo_especifico_kg_m3": 260
+  },
+  "areia": {
+    "nome": "Areia Média Natural",
+    "modulo_finura": "2.20",
+    "massa_especifica_real_kg_l": "2.62",
+    "massa_unitaria_solta_kg_m3": 1400,
+    "umidade_pct": "2.5",
+    "inchamento_coeficiente": "1.20",
+    "absorcao_pct": "0.7"
+  },
+  "britas": [
+    {
+      "nome": "Brita 2 Calcária (25 mm)",
+      "d_max_mm": "25.0",
+      "massa_unitaria_compactada_kg_m3": 1490,
+      "massa_especifica_real_kg_l": "2.65",
+      "massa_unitaria_solta_kg_m3": 1400,
+      "umidade_pct": "0.3",
+      "absorcao_pct": "0.4",
+      "proporcao_mistura": 1
+    }
+  ],
+  "aditivo_redutor_agua_pct": "0.0",
+  "dosagem_aditivo_pct_cimento": "0.0",
+  "aditivo_densidade_kg_l": "1.0",
+  "teor_ar_adicional_pct": "0.0",
+  "precos": {
+    "cimento_por_saco_50kg": "36.00",
+    "areia_por_metro_cubico": "110.00",
+    "brita_por_metro_cubico": "105.00",
+    "agua_por_metro_cubico": "6.00",
+    "aditivo_por_litro": "0.00"
+  }
+}

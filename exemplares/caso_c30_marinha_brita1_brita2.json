@@ -1,0 +1,55 @@
+{
+  "identificacao": "Concreto C30 com Aditivo para Estrutura Portuária Marinha",
+  "fck_mpa": 30,
+  "condicao_preparo": "A",
+  "classe_agressividade": "CAA_III",
+  "tipo_estrutura": "CONCRETO_ARMADO",
+  "slump_mm": 100,
+  "cimento": {
+    "tipo": "CP_III_40",
+    "massa_especifica_real_kg_l": "3.10",
+    "consumo_minimo_especifico_kg_m3": 320
+  },
+  "areia": {
+    "nome": "Areia Quartzosa de Britagem",
+    "modulo_finura": "2.60",
+    "massa_especifica_real_kg_l": "2.65",
+    "massa_unitaria_solta_kg_m3": 1450,
+    "umidade_pct": "4.0",
+    "inchamento_coeficiente": "1.28",
+    "absorcao_pct": "1.0"
+  },
+  "britas": [
+    {
+      "nome": "Brita 1 Granítica (19 mm)",
+      "d_max_mm": "19.0",
+      "massa_unitaria_compactada_kg_m3": 1530,
+      "massa_especifica_real_kg_l": "2.67",
+      "massa_unitaria_solta_kg_m3": 1420,
+      "umidade_pct": "0.8",
+      "absorcao_pct": "0.6",
+      "proporcao_mistura": "0.60"
+    },
+    {
+      "nome": "Brita 2 Granítica (25 mm)",
+      "d_max_mm": "25.0",
+      "massa_unitaria_compactada_kg_m3": 1550,
+      "massa_especifica_real_kg_l": "2.67",
+      "massa_unitaria_solta_kg_m3": 1430,
+      "umidade_pct": "0.4",
+      "absorcao_pct": "0.4",
+      "proporcao_mistura": "0.40"
+    }
+  ],
+  "aditivo_redutor_agua_pct": "10.0",
+  "dosagem_aditivo_pct_cimento": "0.8",
+  "aditivo_densidade_kg_l": "1.18",
+  "teor_ar_adicional_pct": "0.0",
+  "precos": {
+    "cimento_por_saco_50kg": "42.00",
+    "areia_por_metro_cubico": "135.00",
+    "brita_por_metro_cubico": "115.00",
+    "agua_por_metro_cubico": "9.00",
+    "aditivo_por_litro": "14.50"
+  }
+}
