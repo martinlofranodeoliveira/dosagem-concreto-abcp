@@ -4,6 +4,7 @@
 LOFRANO TECNOLOGIA.
 """
 
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -55,15 +56,20 @@ def verificar_distribuicao() -> None:
         ]
         subprocess.run(cmd_install, check=True, capture_output=True)
 
-        # Testar importação a partir do diretório isolado
+        # Testar importação a partir do diretório isolado com ambiente limpo (sem PYTHONPATH)
+        env_limpo = {k: v for k, v in os.environ.items() if k != "PYTHONPATH"}
         cmd_test = [
             sys.executable,
             "-c",
             "import sys; sys.path.insert(0, sys.argv[1]); import dosagem_concreto_abcp; print('Importado com sucesso:', dosagem_concreto_abcp.__version__)",
             str(tmp_p),
         ]
-        res = subprocess.run(cmd_test, check=True, capture_output=True, text=True)
-        print(f"[OK] {res.stdout.strip()}")
+        try:
+            res = subprocess.run(cmd_test, check=True, capture_output=True, text=True, env=env_limpo)
+            print(f"[OK] {res.stdout.strip()}")
+        except subprocess.CalledProcessError as e:
+            print(f"FALHA NA IMPORTAÇÃO ISOLADA:\nSTDOUT:\n{e.stdout}\nSTDERR:\n{e.stderr}", file=sys.stderr)
+            raise
 
 
 if __name__ == "__main__":
