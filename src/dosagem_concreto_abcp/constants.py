@@ -4,6 +4,8 @@ LOFRANO TECNOLOGIA.
 Todos os coeficientes numéricos são expressos como frações exatas (Fraction) ou inteiros.
 """
 
+from __future__ import annotations
+
 from fractions import Fraction
 from typing import NamedTuple
 

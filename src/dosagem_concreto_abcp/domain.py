@@ -4,6 +4,8 @@ LOFRANO TECNOLOGIA.
 Todas as quantidades escalares utilizam estritamente Fraction ou int. Ponto flutuante é proibido.
 """
 
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from enum import Enum
 from fractions import Fraction

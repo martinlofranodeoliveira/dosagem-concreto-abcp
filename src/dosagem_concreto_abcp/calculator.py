@@ -5,19 +5,22 @@ Todas as computações são conduzidas estritamente com frações exatas (Fracti
 Zero uso de ponto flutuante (float).
 """
 
+from __future__ import annotations
+
 from fractions import Fraction
 from typing import Sequence
 
 from .constants import (
-    FATOR_QUANTIL_NORMAL,
-    REGRAS_CONDICAO_PREPARO,
-    LIMITES_CAA,
     CURVAS_ABRAMS_ABCP,
     DIAMETROS_MAXIMOS_VALIDOS,
-    SLUMPS_TABELADOS,
-    TABELA_CONSUMO_AGUA_ABCP,
-    TABELA_AR_APRISIONADO_LITROS,
+    FATOR_QUANTIL_NORMAL,
+    LIMITES_CAA,
+    LimitesAgressividade,
     MODULOS_FINURA_TABELADOS,
+    REGRAS_CONDICAO_PREPARO,
+    SLUMPS_TABELADOS,
+    TABELA_AR_APRISIONADO_LITROS,
+    TABELA_CONSUMO_AGUA_ABCP,
     TABELA_VOLUME_APARENTE_BRITA,
 )
 from .domain import (

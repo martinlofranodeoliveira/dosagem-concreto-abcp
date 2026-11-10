@@ -4,6 +4,8 @@ LOFRANO TECNOLOGIA.
 Proteção estrita contra injeção de fórmulas CSV. Aritmética 100% inteira/racional.
 """
 
+from __future__ import annotations
+
 from fractions import Fraction
 import html
 from typing import Any

@@ -5,6 +5,8 @@ Rejeita floats, BOM, chaves duplicadas, valores não-finitos e profundidade exce
 Serializa e desserializa modelos de domínio com frações exatas.
 """
 
+from __future__ import annotations
+
 from fractions import Fraction
 import json
 from typing import Any

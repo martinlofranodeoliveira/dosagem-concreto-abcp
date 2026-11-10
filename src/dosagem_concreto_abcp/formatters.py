@@ -4,6 +4,8 @@ LOFRANO TECNOLOGIA.
 Todos os cálculos de arredondamento e conversão de frações são estritamente inteiros. Ponto flutuante é proibido.
 """
 
+from __future__ import annotations
+
 from fractions import Fraction
 from typing import Sequence
 from .domain import TracoMassa, AjusteCanteiro, ConsumosMetroCubico, CustoConcreto
