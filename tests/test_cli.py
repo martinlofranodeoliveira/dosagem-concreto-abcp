@@ -32,10 +32,11 @@ class TestCli(unittest.TestCase):
         self.assertEqual(codigo, 0)
 
     def test_cli_modelo_arquivo_retorna_0(self):
-        with tempfile.NamedTemporaryFile(suffix=".json") as tmp:
-            codigo = main(["modelo", "--saida", tmp.name])
+        with tempfile.TemporaryDirectory() as tmpdir:
+            p = Path(tmpdir) / "modelo.json"
+            codigo = main(["modelo", "--saida", str(p)])
             self.assertEqual(codigo, 0)
-            conteudo = Path(tmp.name).read_text(encoding="utf-8")
+            conteudo = p.read_text(encoding="utf-8")
             self.assertIn("fck_mpa", conteudo)
 
     def test_cli_calcular_arquivo_inexistente_retorna_1(self):

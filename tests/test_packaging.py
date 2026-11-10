@@ -32,18 +32,15 @@ class TestPackaging(unittest.TestCase):
         self.assertEqual(sha256(b1).hexdigest(), sha256(b2).hexdigest())
 
     def test_zip_contem_data_hora_fixa_e_permissao(self):
+        import io
         arquivos = {"teste.txt": "teste"}
         bytes_zip = gerar_bytes_zip_deterministico(arquivos)
 
-        with tempfile.NamedTemporaryFile(suffix=".zip") as tmp:
-            tmp.write(bytes_zip)
-            tmp.flush()
-
-            with zipfile.ZipFile(tmp.name, "r") as zf:
-                info = zf.getinfo("teste.txt")
-                self.assertEqual(info.date_time, DATA_HORA_FIXA)
-                # Permissão 0o100644 nos 16 bits superiores
-                self.assertEqual(info.external_attr >> 16, 0o100644)
+        with zipfile.ZipFile(io.BytesIO(bytes_zip), "r") as zf:
+            info = zf.getinfo("teste.txt")
+            self.assertEqual(info.date_time, DATA_HORA_FIXA)
+            # Permissão 0o100644 nos 16 bits superiores
+            self.assertEqual(info.external_attr >> 16, 0o100644)
 
     def test_salvar_zip_nao_sobrescreve_sem_flag(self):
         with tempfile.TemporaryDirectory() as tmpdir:
